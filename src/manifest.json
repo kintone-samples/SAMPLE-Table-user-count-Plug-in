@@ -1,0 +1,37 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "desktop": {
+    "js": [
+      "js/desktop.js"
+    ]
+  },
+  "icon": "image/people.png",
+  "config": {
+    "html": "html/config.html",
+    "js": [
+      "https://js.kintone.com/jquery/3.3.1/jquery.min.js",
+      "js/config.js",
+      "js/kintone-ui-component.min.js"
+    ],
+    "css": [
+      "css/51-modern-default.css",
+      "css/config.css",
+      "css/kintone-ui-component.min.css"
+    ],
+    "required_params": [
+      "table_field",
+      "user_field"
+    ]
+  },
+  "name": {
+    "en": "Table User Count Plug-in"
+  },
+  "description": {
+    "en": "This sample plugin counts the number of users listed inside the tables, and places that number in a given field, when you save your record data."
+  },
+  "homepage_url": {
+    "en": "https://developer.kintone.io/hc/en-us/articles/115007851447"
+  }
+}

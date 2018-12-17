@@ -29,7 +29,7 @@ jQuery.noConflict();
                         for (var key2 in prop.fields) {
                             var field = prop.fields[key2];
                             if (field.type === 'USER_SELECT') {
-                                //Set table code and number field code
+                                // Set table code and number field code
                                 user_fields.push({"label": field.label,
                                     "value": prop.code + ',' + field.code});
                             }
@@ -48,7 +48,7 @@ jQuery.noConflict();
         });
     }
     function setUIComponent() {
-        // Get space info.
+        // Get space info
         var dropdownSpace = document.getElementById('dropdown_space');
         var user_dropdown = new kintoneUIComponent.Dropdown({
             items: user_fields,
@@ -66,7 +66,7 @@ jQuery.noConflict();
             }
         }
 
-        // Get space info.
+        // Get space info
         var subtableSpace = document.getElementById('subtable_space');
 
         var text = new kintoneUIComponent.Text();
@@ -102,14 +102,14 @@ jQuery.noConflict();
     }
 
     $(document).ready(function() {
-        getFields() //Get fields info.
-            .then(setUIComponent) //Set UI Component
+        getFields() // Get fields info
+            .then(setUIComponent) // Set UI Component
             .then(function(components) {
                 // Set input values when 'Save' button is clicked
                 $('#check-plugin-submit').click(function() {
                     var config = [];
-                    var user_field = components.dropdown.getValue();//Get selected value for user field
-                    var values = components.table.getValue();//Get config values in table
+                    var user_field = components.dropdown.getValue(); // Get selected value for user field
+                    var values = components.table.getValue(); // Get config values in table
                     var users = [];
 
                     for (var i = 0; i < values.length; i++) {
@@ -128,9 +128,9 @@ jQuery.noConflict();
                         }
                     }
 
-                    config.table_field = user_field.split(',')[0];//Set table field code
-                    config.user_field = user_field.split(',')[1];//Set user field code
-                    config.user_count = JSON.stringify(users);//Set login name and user count field
+                    config.table_field = user_field.split(',')[0]; // Set table field code
+                    config.user_field = user_field.split(',')[1]; // Set user field code
+                    config.user_count = JSON.stringify(users); // Set login name and user count field
 
                     kintone.plugin.app.setConfig(config);
                 });

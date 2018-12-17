@@ -8,18 +8,18 @@
 (function(PLUGIN_ID) {
     'use strict';
 
-    // Get plugin configuration settings
+    // Get plug-in configuration settings
     var CONFIG = kintone.plugin.app.getConfig(PLUGIN_ID);
-    // Get each settings
+    // Get each setting
     if (!CONFIG) {
         return false;
     }
 
-    var TABLEDATA = CONFIG.table_field; // field code of the table
-    var USERFIELD = CONFIG.user_field; // field code of user field in table
+    var TABLEDATA = CONFIG.table_field; // Field code of the table
+    var USERFIELD = CONFIG.user_field; // Field code of user selection field in table
     var USERS = JSON.parse(CONFIG.user_count);
 
-    //Set events to run when the save button is clicked on the record create or edit page
+    // Set events to run when the save button is clicked on the record create or edit page
     kintone.events.on(["app.record.create.submit", "app.record.edit.submit"], function(eventobj) {
         //Count the number of rows in the table
         var num_of_rows = eventobj.record[TABLEDATA].value;
@@ -40,12 +40,12 @@
             }
         }
 
-        //Set a new value in a field, listed in the event object
+        // Set a new value in a field, listed in the event object
         for (var l = 0; l < USERS.length; l++) {
             eventobj.record[USERS[l][1]].value = user_count[l];
         }
 
-        //Return the event object, so that kintone will use this new data
+        // Return the event object, so that Kintone will use this new data
         return eventobj;
     });
 })(kintone.$PLUGIN_ID);

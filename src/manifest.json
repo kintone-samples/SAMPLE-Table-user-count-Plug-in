@@ -29,7 +29,7 @@
     "en": "Table User Count Plug-in"
   },
   "description": {
-    "en": "This sample plug-in counts the number of users listed inside a table, and places that number into a given field when the record data is saved."
+    "en": "This plug-in counts the number of times a user is listed inside a table, and places that number into a given field when the record data is saved."
   },
   "homepage_url": {
     "en": "https://developer.kintone.io/hc/en-us/articles/115007851447"

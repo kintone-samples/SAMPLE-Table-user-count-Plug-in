@@ -21,7 +21,7 @@ src/
 ├── js/  
 │        ├──── config.js  
 │        ├──── desktop.js
-│        └──── kintone-ui-component.min.js
+│        └──── kintone-ui-component.min.js  
 ├── image/  
 │        └──── people.png  
 └── manifest.json  

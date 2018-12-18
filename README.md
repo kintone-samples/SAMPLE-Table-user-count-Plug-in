@@ -20,7 +20,7 @@ src/
 │        └──── kintone-ui-component.min.css  
 ├── js/  
 │        ├──── config.js  
-│        ├──── desktop.js
+│        ├──── desktop.js  
 │        └──── kintone-ui-component.min.js  
 ├── image/  
 │        └──── people.png  

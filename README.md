@@ -35,7 +35,7 @@ Reference: https://github.com/kintone/SAMPLE-Date-input-button-Plug-in/releases
 Reference: https://get.kintone.help/hc/en-us/articles/115001519707-Installing-Viewing-Plug-ins
 3. Add the plug-in to a specific Kintone App  
 Reference: https://get.kintone.help/hc/en-us/articles/115001511188-Adding-Plug-ins-to-an-App
-4. Make sure that at least one Number field and a Table with a User Selection field are placed in the form of your Kintone App. Access the plug-in settings, and set up the neccessary settings. Save the settings, and update the App.
+4. Make sure that at least one Number field and a Table with a User Selection field are placed in the form of your Kintone App. Access the plug-in settings, and set up the necessary settings. Save the settings, and update the App.
 5. Create a new record and make as many rows in the table as you would like, filling in the User Selection field. Save the record. The number of times the specified user has been entered into the User Selection fields in the table will appear in the Number field.
 
 ## How to modify
